@@ -1,0 +1,229 @@
+/* Genel Reset ve Box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sayfa genel stili */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header ve Navigasyon */
+header {
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.navbar h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background 0.4s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Ana Sayfa Bölümü */
+section {
+    padding: 80px 20px;
+    margin: 30px auto;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+section h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* İletişim Formu */
+form {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+form:hover {
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+form input, form textarea {
+    padding: 15px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #6a82fb;
+    outline: none;
+}
+
+form button {
+    background-color: #6a82fb;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #fc5c7d;
+    transform: translateY(-4px);
+}
+
+form button:active {
+    transform: translateY(1px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 60px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* Animasyon ve Etkileşimler */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section, form {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    header {
+        padding: 50px 20px;
+    }
+
+    .navbar h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    form input, form textarea {
+        font-size: 1rem;
+    }
+
+    form button {
+        font-size: 1rem;
+    }
+}
